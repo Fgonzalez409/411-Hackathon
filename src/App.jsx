@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
-import './App.css'
+import SearchBar from './SearchBar';
+import './App.css';
 
-function FetchDataComponent() {
+function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ function FetchDataComponent() {
       try {
         const response = await fetch('http://hn.algolia.com/api/v1/search');
         const jsonData = await response.json();
-        setData(jsonData);
+        setData(jsonData.hits);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -19,29 +19,28 @@ function FetchDataComponent() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log('%c Here', 'color: orange', data);
+  }, [data]);
+
   return (
     <div>
+      <SearchBar items={data} />
       {data ? (
         <div>
-          {data.hits.map(item => (
+          {data.map((item) => (
             <div key={item.objectID}>
               <h1>{item.title}</h1>
               <h2>Author: {item.author}</h2>
-              <a href={item.url} target = "_blank">Link</a>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                {item.url}
+              </a>
             </div>
           ))}
         </div>
       ) : (
         <p>Loading data...</p>
       )}
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <div className="App">
-      <FetchDataComponent />
     </div>
   );
 }
