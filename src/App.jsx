@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
+import moment from 'moment';
+
 
 function FetchDataComponent() {
   const [data, setData] = useState(null);
@@ -24,9 +26,10 @@ function FetchDataComponent() {
         <div>
           {data.hits.map(item => (
             <div key={item.objectID}>
-              <h1>{item.title}</h1>
-              <h2>Author: {item.author}</h2>
-              <a href={item.url} target = "_blank">Link</a>
+              <h3>{item.title} (<a href={item.url} target = "_blank">{item.url}) </a></h3>
+        
+              {/* <a href={item.url} target = "_blank">{item.url}</a> */}
+              <p>{item.points} Points | {item.author} | {moment(item.created_at).fromNow()}</p>
             </div>
           ))}
         </div>
