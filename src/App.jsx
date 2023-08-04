@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import "normalize.css"
 import './App.css'
 
 function App() {
@@ -9,7 +8,23 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
+    <body>
+    <div className="header-container">
+      <header className="sticky-header">
+        <div className="logo">Your Logo</div>
+        <div className="search-bar-container">
+          <input type="text" placeholder="Search by title, url or author" />
+          <button type="submit">Search</button>
+        </div>
+      </header>
+    </div>
+
+    
+    </body>
+=======
       
+>>>>>>> 09067ea06d3ca2330620bea536b7f4ec14326683
     </>
   )
 }
