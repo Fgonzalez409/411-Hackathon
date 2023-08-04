@@ -8,16 +8,18 @@ function App() {
   return (
     <>
     <body>
-        <header className="sticky-header">
-          <div className="logo">Search Hacker News</div>
-              <div className="search-bar-container">
-                <input type="text" placeholder="Search stories by title, url or author" />
-                <button type="submit"></button>
-              </div>
-        </header>
-      
+    <div className="header-container">
+      <header className="sticky-header">
+        <div className="logo">Your Logo</div>
+        <div className="search-bar-container">
+          <input type="text" placeholder="Search by title, url or author" />
+          <button type="submit">Search</button>
+        </div>
+      </header>
+    </div>
+
+    
     </body>
-      
     </>
   )
 }

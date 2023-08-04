@@ -1,13 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  
 }
 
-
+.header-container {
+  display: flex;
+  justify-content: center;
+}
 
 .sticky-header {
-  width: auto;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -17,6 +18,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
 }
 
 .logo {
@@ -27,16 +29,17 @@ body {
 
 .search-bar-container {
   display: flex;
-  flex: 0 1 60%; /* The search bar will cover 60% of the header */
-  justify-content: center; /* To center the search bar horizontally */
+  align-items: center;
+  flex: 0 0 75%;
+  justify-content: center;
 }
 
 .search-bar-container input[type="text"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px 0 0 5px;
+  width: 100%;
 }
-
 
 .search-bar-container button {
   padding: 5px 10px;
