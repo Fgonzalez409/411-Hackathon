@@ -1,0 +1,58 @@
+<<<<<<< HEAD
+=======
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+.sticky-header {
+  width: auto;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.search-bar-container {
+  display: flex;
+  flex: 0 1 60%; /* The search bar will cover 60% of the header */
+  justify-content: center; /* To center the search bar horizontally */
+}
+
+.search-bar-container input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+
+.search-bar-container button {
+  padding: 5px 10px;
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 20px;
+  }
+}
+>>>>>>> 4e873ad (add styles)
