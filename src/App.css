@@ -6,10 +6,15 @@ body {
 .header-container {
   display: flex;
   justify-content: center;
+  width:500px;
+}
+
+.data-items {
+  margin-top: 100px;
 }
 
 .sticky-header {
-  background-color: #333;
+  background-color: orange;
   color: #fff;
   display: flex;
   align-items: center;

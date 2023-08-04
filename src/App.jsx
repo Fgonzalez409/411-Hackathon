@@ -24,22 +24,20 @@ function FetchDataComponent() {
     
     <div>
       <body>
-    <div className="header-container">
-      <header className="sticky-header">
-        <div className="logo">Your Logo</div>
-        <div className="search-bar-container">
-          <input type="text" placeholder="Search by title, url or author" />
-          <button type="submit">Search</button>
+        <div className="header-container">
+          <header className="sticky-header">
+            <div className="logo">Hacker Search News</div>
+            <div className="search-bar-container">
+              <input type="text" placeholder="Search by title, url or author" />
+              <button type="submit">Search</button>
+            </div>
+          </header>
         </div>
-      </header>
-    </div>
-
-    
-    </body>
+      </body>
 
 
       {data ? (
-        <div>
+        <div className="data-items">
           {data.hits.map(item => (
             <div key={item.objectID}>
               <h1>{item.title}</h1>
