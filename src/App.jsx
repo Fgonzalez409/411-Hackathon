@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "normalize.css"
 import './App.css'
-
 function FetchDataComponent() {
   const [data, setData] = useState(null);
 
@@ -20,24 +18,18 @@ function FetchDataComponent() {
   }, []);
 
   return (
+    <>
+        <header className="sticky-header">
+          <div className="logo">Your Logo</div>
+          <div className="search-bar-container">
+            <input type="text" placeholder="Search by title, url or author" />
+            <button type="submit">Search</button>
+          </div>
+        </header>
 
-    
-    <div>
-      <body>
-        <div className="header-container">
-          <header className="sticky-header">
-            <div className="logo">Hacker Search News</div>
-            <div className="search-bar-container">
-              <input type="text" placeholder="Search by title, url or author" />
-              <button type="submit">Search</button>
-            </div>
-          </header>
-        </div>
-      </body>
-
-
-      {data ? (
-        <div className="data-items">
+      <div className="container">
+        {data ? (
+        <div>
           {data.hits.map(item => (
             <div key={item.objectID}>
               <h1>{item.title}</h1>
@@ -49,7 +41,10 @@ function FetchDataComponent() {
       ) : (
         <p>Loading data...</p>
       )}
-    </div>
+        
+      </div>
+      
+    </>
   );
 }
 
