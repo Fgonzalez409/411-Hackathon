@@ -57,3 +57,6 @@ function App() {
 }
 
 export default App;
+
+//this is the example page to mimic
+// https://hn.algolia.com/
